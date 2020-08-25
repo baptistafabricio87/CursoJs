@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Joguinho</title>
+    <title>Ping-Pong</title>
 </head>
 <body>
     <canvas id="folha" width="600" height="500"></canvas>
@@ -11,6 +11,35 @@
     <script>
         var folhaDesenho = document.getElementById("folha");
         var areaDesenho = folhaDesenho.getContext("2d");
+
+        var larguraCampo = 600;
+        var alturaCampo = 500;
+        var larguraLinha = 5;
+        var tamanhoBola = 5;
+        var alturaRaquete = 50;
+
+        //campo 
+        areaDesenho.fillStyle = '#286047';
+        areaDesenho.fillRect(0, 0, larguraCampo, alturaCampo);
+
+        //linhas
+        areaDesenho.fillStyle = '#ffffff';
+        areaDesenho.fillRect(larguraCampo/2 - larguraLinha/2, 0, larguraLinha, alturaCampo); //central
+        areaDesenho.fillRect(5, 5, larguraCampo-10, 5); //superior
+        areaDesenho.fillRect(5, alturaCampo-10, larguraCampo-10, 5); //inferior
+        areaDesenho.fillRect(5, 5, 5, alturaCampo-10); //
+        areaDesenho.fillRect(larguraCampo-10, 5, 5, alturaCampo-10); // inferior
+        
+        //bola
+        areaDesenho.fillRect(30, 155, tamanhoBola, tamanhoBola);
+
+        //player1
+        areaDesenho.fillStyle = '#ff1a1a';
+        areaDesenho.fillRect(larguraLinha*3, 150, larguraLinha, alturaRaquete);
+
+        //player2
+        areaDesenho.fillStyle = '#1a75ff';
+        areaDesenho.fillRect(larguraCampo - larguraLinha*4, 250, larguraLinha, alturaRaquete);
     </script>
     
 </body>
