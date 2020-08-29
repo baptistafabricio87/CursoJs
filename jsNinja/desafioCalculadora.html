@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafios</title>
+</head>
+<body>
+    <script>
+
+        /* 1
+        Crie um código de uma possível calculadora que receberá sempre valores como
+        texto e deve retornar os dois valores somados.
+        */
+        alert(Number("5") + Number("3"));
+
+        /* 2
+        Continuar o desafio da calculadora, agora armazenando os valores em variáveis 
+        (chamadas de X e Y), somando-as e o resultado também sendo armazenado em uma variável.
+        */
+        var x = "4";
+        var y = "3";
+        var result = Number(x) + Number(y);
+        alert("Resultado da soma: " + result);
+
+        /* 3
+        Incremente a nossa calculara para receber os valores a partir dos dados digitados 
+        pelo usuário e mostrar como um alerta.
+        */
+        x = prompt("Digite o primeiro numero: ");
+        y = prompt("Digite o segundo numero: ");
+        result = Number(x) + Number(y);
+        alert("Resultado da soma: " + result);
+
+        /* 4
+        No nosso desafio da calculadora, criar um IF para verificar se o valor é maior que 10, 
+        caso seja, informar uma mensagem escolhida por você.
+        */
+        x = prompt("Digite o primeiro numero: ");
+        y = prompt("Digite o segundo numero: ");
+        result = Number(x) + Number(y);
+        if ( result > 10) {
+            alert("Resultado da soma é maior que 10: " + result);
+        } else {
+            alert("Resultado da soma é menor que 10: " + result);
+        }
+
+        /* 5
+        No nosso exemplo da calculadora criar uma rotina que fique sempre perguntando os valores 
+        até que seja digitado a letra N em qualquer valor (indicando uma condição de parada).
+        */
+        var x, y, result;
+        while (x != "n" && y != "n") {
+            x = prompt("Digite o primeiro numero: ");
+            y = prompt("Digite o segundo numero: ");
+            result = Number(x) + Number(y);
+            if ( result > 10) {
+                alert("Resultado da soma é maior que 10: " + result);
+            } else {
+                alert("Resultado da soma é menor que 10: " + result);
+            }
+        }
+
+        while (true) {
+            x = prompt("Digite o primeiro numero ou n: ");
+            y = prompt("Digite o segundo numero ou n: ");
+            if(x == "n" || y == "n") {
+                break;
+            }
+            result = Number(x) + Number(y);
+            if ( result > 10) {
+                alert("Resultado da soma é maior que 10: " + result);
+            } else {
+                alert("Resultado da soma é menor que 10: " + result);
+            }
+        }
+
+        /* 6
+        Utilizando o for crie um programa que calcule a função log Math.log(x) 
+        para cada valor do contador. 
+        Este programa deve solicitar os valores iniciais, finais e de incremento. 
+        E também escrever na tela oresultado.
+        */
+        vi = Number(prompt("Insira valor inicial: "));
+        vf = Number(prompt("Insira valor final: "));
+        vin = Number(prompt("Insira valor incremento: "));
+        for (x = vi; x <= vf; x+=vin) {
+            result = Math.log(x);
+            console.log(result);
+        }
+
+    </script>
+</body>
+</html>
