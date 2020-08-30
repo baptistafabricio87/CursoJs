@@ -15,7 +15,7 @@
         alert(Number("5") + Number("3"));
 
         /* 2
-        Continuar o desafio da calculadora, agora armazenando os valores em variáveis 
+        Continuar o desafio da calculadora, agora armazenando os valores em variáveis
         (chamadas de X e Y), somando-as e o resultado também sendo armazenado em uma variável.
         */
         var x = "4";
@@ -24,7 +24,7 @@
         alert("Resultado da soma: " + result);
 
         /* 3
-        Incremente a nossa calculara para receber os valores a partir dos dados digitados 
+        Incremente a nossa calculara para receber os valores a partir dos dados digitados
         pelo usuário e mostrar como um alerta.
         */
         x = prompt("Digite o primeiro numero: ");
@@ -33,7 +33,7 @@
         alert("Resultado da soma: " + result);
 
         /* 4
-        No nosso desafio da calculadora, criar um IF para verificar se o valor é maior que 10, 
+        No nosso desafio da calculadora, criar um IF para verificar se o valor é maior que 10,
         caso seja, informar uma mensagem escolhida por você.
         */
         x = prompt("Digite o primeiro numero: ");
@@ -46,7 +46,7 @@
         }
 
         /* 5
-        No nosso exemplo da calculadora criar uma rotina que fique sempre perguntando os valores 
+        No nosso exemplo da calculadora criar uma rotina que fique sempre perguntando os valores
         até que seja digitado a letra N em qualquer valor (indicando uma condição de parada).
         */
         var x, y, result;
@@ -76,9 +76,9 @@
         }
 
         /* 6
-        Utilizando o for crie um programa que calcule a função log Math.log(x) 
-        para cada valor do contador. 
-        Este programa deve solicitar os valores iniciais, finais e de incremento. 
+        Utilizando o for crie um programa que calcule a função log Math.log(x)
+        para cada valor do contador.
+        Este programa deve solicitar os valores iniciais, finais e de incremento.
         E também escrever na tela oresultado.
         */
         vi = Number(prompt("Insira valor inicial: "));
@@ -88,6 +88,19 @@
             result = Math.log(x);
             console.log(result);
         }
+
+        /* 7
+        Criar uma função chamada somar para a nossa calculadora e
+        utilizar esta função.
+        */
+        function somar (x, y) {
+            console.log(x + y);
+        }
+
+        var x = Number(prompt("Digite o primeiro numero: "));
+        var y = Number(prompt("Digite o segundo numero: "));
+        somar(x, y);
+
 
     </script>
 </body>
