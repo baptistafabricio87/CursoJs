@@ -1,7 +1,7 @@
 <html>
 <script>
 
-// função com parametro 
+// função com parametro
     var soma = function(x, y) {
         var result = x + y;
         return result;
@@ -11,12 +11,65 @@
 
     console.log(result);
 
-// função sem paramentro 
+// função sem paramentro
     var plim = function() {
         console.log("plim plim");
     }
 
     plim();
+
+// desvio de função
+    var lancarMissilNuclear = function(pais) {
+      if (pais == 'russia'){
+        console.log("Usar telefone vermelho");
+      } else {
+        console.log("lancçando missil...");
+      }
+    }
+
+    lancarMissilNuclear();
+
+    var pais = 'algum';
+
+    var lancarMissilNuclear = function(pais) {
+        console.log("lancçando missil...");
+    }
+
+    if (pais == 'russia'){
+      lancarMissilNuclear = function() {
+        console.log("Usar telefone vermelho");
+      }
+    }
+
+    lancarMissilNuclear();
+
+    var ola = function (quem) {
+      if (quem == undefined) {
+        console.log("Olá tudo bem?");
+      } else {
+        console.log("Olá tudo bem com você " + quem + " ?");
+      }
+    }
+
+    ola();
+    ola("João");
+
+    // função calculo de potencia
+    function potencia (base, expoente) {
+      if (expoente == undefined) {
+          expoente = 2; // define o expoente padrão, quando não definido.
+      }
+      var resultado = 1;
+      for (var cont = 0; cont < expoente; cont++) {
+        resultado *= base;
+      }
+
+      return resultado;
+    }
+
+    console.log(potencia(2));
+    console.log(potencia(2,3));
+
 </script>
 
 </html>
