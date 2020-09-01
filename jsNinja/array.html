@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  </head>
+  <body>
+    <script>
+// criando um array
+      var nomes = [];
+      var qtdConvidados = Number(prompt("Digite o numero de convidados"));
+
+      for (i=0; i < qtdConvidados; i++) {
+        nomes[i] = prompt("Digite o nome do convidado: ");
+      }
+      console.log(nomes);
+// consultar array
+      var nomes1 = ["Felipe", "Douglas", "João"];
+
+      console.log(nomes1[0]);
+      console.log(nomes1[1]);
+      console.log(nomes1[2]);
+
+//manipulação de array
+  // push insere elemento no array
+  // pop remove elemento do array
+
+      var nomes2 = ["Ana"];
+
+      nomes2.push("Felipe");
+      nomes2.push("Douglas");
+      var removido = nomes2.pop();
+      nomes2.push("Tatiana");
+
+      console.log(nomes2);
+      console.log(removido);
+      console.log(nomes2.length);
+
+// Utilizando forEach para ler o array
+      nomes2.forEach(function(nome) {
+        console.log(nome);
+      });
+
+// como funciona o forEach - conceito callBack
+      var callback = function(nome) {
+        console.log(nome);
+      }
+
+      nomes2.forEach(callback);
+
+
+
+    </script>
+  </body>
+</html>
