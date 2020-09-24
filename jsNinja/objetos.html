@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Objetos</title>
+</head>
+<body>
+<script>
+    var nomes = ["Felipe", "Zezinho", "Fulano"];
+    var idade = [22, 40, 60];
+    var cpf = ["000.000.000-01", "000.000.000-02", "000.000.000-03"];
+
+    for (i = 0; i < nomes.length; i++) {
+        console.log(nomes[i], " ", idade[i], " ", cpf[i]);
+    }
+
+    var convidado = {nome: "Felipe", iddade: 22, cpf: "000.000.000-01"};
+    console.log(convidado);
+
+    var convidados = [];
+    convidados.push({nome: "Felipe", idade: 22, cpf: "000.000.000-01"});
+    convidados.push({nome: "Zezinho", idade: 40, cpf: "000.000.000-02"});
+    convidados.push({nome: "Fulano", idade: 60, cpf: "000.000.000-03"});
+    console.log(convidados);
+
+// HASH
+        var convidados = {};
+
+        convidados["ABC123"] = {nome: "Fabricio", idade: 33, rg: "416449621"};
+        convidados["XYZ456"] = {nome: "Tatiana", idade: 33, rg: "469576481"};
+
+        console.log(convidados["ABC123"]);
+
+// Funções com parametros
+function ola (quem) {
+    if (quem == undefined) {
+        console.log("Ola tudo bem com você ?")
+    } else {
+        console.log("Olá " + quem + " como vai ? Tudo bem ?");
+    }
+}
+
+ola("Fabricio");
+ola();
+
+ola("Fabricio", "Daniel", "Tatiana", "Miguel");
+
+// OBJETO ARGUMENTS, UTILIZADO EM FUNÇÕES,
+// RECEBE OS ARGUMENTOS EM FORMA DE ARRAY
+// E OS APLICA A FUNÇÃO
+function ola() {
+    var mensagem = "Olá ";
+    for(i = 0;i < arguments.length - 1;i++) {
+        mensagem += arguments[i];
+        if (i < arguments.length - 2) {
+        mensagem += ", ";
+        }
+    }
+    mensagem += " e " + arguments[arguments.length - 1] + "! Tudo bem!?";
+    console.log(mensagem);
+}
+
+ola("Felipe", "Gabriel", "Bruno", "Douglas");
+
+</script>
+</body>
+</html>

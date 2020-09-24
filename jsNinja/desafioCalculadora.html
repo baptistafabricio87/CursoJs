@@ -101,7 +101,6 @@
         var y = Number(prompt("Digite o segundo numero: "));
         somar(x, y);
 
-<<<<<<< HEAD
         /* 8
         Como parte da nossa viagem matemática implemente a função fatorial
         (sem a chamada da biblioteca Math) com recursão.
@@ -117,9 +116,42 @@
 
         fatorial(1);
         fatorial(5);
-=======
 
->>>>>>> 32d415da9f8c090cc312a4834a243bac5ad96322
+        /* 
+        Com o conceito de array em mente,
+        implemente na sua calculadora o calculo 
+        de média aritmética.
+        */
+    // Implementaçaõ própria.
+        var notas = [];
+        var nNotas = Number(prompt("Informe o numero de notas:"));
+        var somaNotas = 0;
+
+        for(i=0; i < nNotas; i++){
+            notas[i] = Number(prompt("Digite a nota " + i + ":"));
+        }
+        for(i=0; i < notas.length; i++){
+            somaNotas += notas[i];
+            console.log(somaNotas);
+        }
+        console.log(somaNotas / nNotas);
+
+        // implementação da apostila.
+        var numeros = [];
+        while(true) {
+            var numero = prompt("Digite um número ou S para sair");
+            if (numero == 'S') {
+                break;
+            } else {
+                numeros.push(Number(numero));
+            }
+        }
+        var soma = 0;
+        for (i = 0;i < numeros.length;i++) {
+            soma += numeros[i];
+        }
+        var resultado = soma / numeros.length;
+        console.log(resultado);
     </script>
 </body>
 </html>

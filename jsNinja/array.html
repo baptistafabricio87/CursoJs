@@ -13,15 +13,13 @@
       console.log(nomes);
 // consultar array
       var nomes1 = ["Felipe", "Douglas", "João"];
-
       console.log(nomes1[0]);
       console.log(nomes1[1]);
       console.log(nomes1[2]);
 
 //manipulação de array
-  // push insere elemento no array
-  // pop remove elemento do array
-
+  // push insere elemento no fim do array 
+  // pop remove elemento do inicio do array
       var nomes2 = ["Ana"];
 
       nomes2.push("Felipe");
@@ -42,11 +40,48 @@
       var callback = function(nome) {
         console.log(nome);
       }
-
       nomes2.forEach(callback);
 
+// metodo unshift - insere elemento no inicio do array.
+      var nomes = ["Felipe", "Bruno"];
+      console.log(nomes);
+      nomes.unshift("Fabricio");
+      console.log(nomes);
 
+// metodo shift - remove elemento do inicio do array
+      var nomes = ["Bruno", "Felipe", "Douglas"];
+      console.log(nomes);
+      nomes.shift();
+      console.log(nomes);
 
+// metodo splice - manipula de forma geral, exclui, insere etc
+// array.splice(indice[, deleteCount[, elemento1[, ...[, elementoN]]]])
+      var nomes = ["Bruno", "Felipe", "Douglas", "Tatiana"];
+      nomes.splice(1); // remove os elementos a partir da primeira posição.
+      console.log(nomes);
+      nomes.push("Felipe", "Fabricio", "Tatiana");
+      nomes.splice(1, 2); //  remove a partir da primeira posição e de dois em dois até o final.
+      console.log(nomes);
+      nomes.push("Miguel", "Fabricio", "Ana");
+      nomes.splice(1, 2, "Luizelia", "Eduardo"); 
+      // remove dois elementos a partir da primeira posição e insere dois novo na mesma posição. 
+      console.log(nomes);
+
+// metodo indexOf - Busca no array, a busca precisa ser igual ao gravado no array.
+      var nomes = ["Bruno", "Fabricio", "Douglas", "Tatiana"];
+      var busca = "Fabricio"
+      var indice = nomes.indexOf("Fabricio");
+
+      console.log("Encontrei: " + busca + " no indice: " + indice);
+      
+// String é um array, por ser uma cadeia de caracteres, exemplo abaixo.
+      var texto = "Teste";
+
+      for (let i = 0; i < texto.length; i++) {
+            console.log(texto[i]);
+      }
+
+//
     </script>
   </body>
 </html>

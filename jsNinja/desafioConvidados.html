@@ -1,0 +1,59 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            var convidados = [];
+
+            while(true){
+                var nome = prompt("Informe nome do convidado ou S para sair: ");
+                if(nome == "S" || nome == "s") {
+                    console.log("Saindo...")
+                    break;
+                } else {
+                    var idade = prompt("Informe a idade do convidado: ");
+                    var cpf = prompt("Informa CPF do convidado: ");
+                    convidados.push({nome: nome, idade: idade, cpf: cpf});
+                }
+                console.log(convidados);
+            }
+
+            Array.prototype.groupBy = function(prop) {
+                var value = this.reduce(function(total, item) {
+                    var key = item[prop];
+                    total[key] = (total[key] || []).concat(item);
+                    return total;
+                }, {});
+                return value;
+            }
+
+            var convidados = [
+                {nome: 'Felipe', idade: 37, genero: 'masculino'},
+                {nome: 'Amanda', idade: 17, genero: 'feminino'},
+                {nome: 'João', idade: 27, genero: 'masculino'},
+                {nome: 'Daniel', idade: 21, genero: 'masculino'},
+                {nome: 'Helena', idade: 21, genero: 'feminino'}
+            ];
+
+            var convidadosFiltrados = convidados.sort(function(a, b) {
+                return (a.nome > b.nome) ? 1 : -1; // 1 B precede A, -1 A precede B
+            }).filter(function(item) {
+                return item.idade >= 18;
+            }).groupBy('genero');
+            
+            console.log(convidadosFiltrados);
+            // → {
+            // "feminino": [
+            // {nome: "Helena", idade: 21, genero: "feminino"}
+            // ],
+            // "masculino": [
+            // {nome: "Daniel", idade: 21, genero: "masculino"},
+            // {nome: "Felipe", idade: 37, genero: "masculino"},
+            // {nome: "João", idade: 27, genero: "masculino"}
+            // ]
+            // }
+            
+        </script>
+    </body>
+</html>
